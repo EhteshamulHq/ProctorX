@@ -1,9 +1,11 @@
 # Authentication
 
 ## Status
+
 Planned
 
 ## Scope
+
 - Registration
 - Login
 - Logout

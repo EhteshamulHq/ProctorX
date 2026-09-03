@@ -1,9 +1,11 @@
 # Remote Proctoring
 
 ## Status
+
 Planned
 
 ## Scope
+
 - Camera permission
 - Microphone permission
 - Browser/environment checks
