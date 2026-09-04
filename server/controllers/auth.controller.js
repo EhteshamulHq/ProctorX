@@ -1,4 +1,4 @@
-const { registerUser } = require("../services/auth.service");
+const { registerUser, loginUser } = require("../services/auth.service");
 
 const register = async (req, res, next) => {
   try {
@@ -52,6 +52,36 @@ const register = async (req, res, next) => {
   }
 };
 
+const login = async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+
+    if (
+      typeof email !== "string" ||
+      !email.trim() ||
+      typeof password !== "string" ||
+      !password
+    ) {
+      const error = new Error("Email and password are required");
+      error.statusCode = 400;
+      throw error;
+    }
+
+    const result = await loginUser({
+      email,
+      password,
+    });
+
+    return res.status(200).json({
+      success: true,
+      data: result,
+    });
+  } catch (error) {
+    return next(error);
+  }
+};
+
 module.exports = {
   register,
+  login,
 };
