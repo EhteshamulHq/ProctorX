@@ -65,17 +65,26 @@ None.
   "password": "Password123!"
 }
 
-### Success Response
+## Login
 
-**Status:** `200 OK`
+### Login User
+
+**Method*
+
+`POST`
+
+**Endpoint*
+
+`/auth/login`
+
+**Authentication*
+
+None.
+
+**Request Body**
 
 ```json
 {
-  "success": true,
-  "data": {
-    "service": "ProctorX API",
-    "status": "healthy",
-    "environment": "development",
-    "timestamp": "2026-..."
-  }
+  "email": "candidate@example.com",
+  "password": "Password123!"
 }
