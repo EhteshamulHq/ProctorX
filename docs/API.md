@@ -40,13 +40,30 @@ Development:
 
 `/health`
 
+## Authentication
+
+### Register Candidate
+
+**Method*
+
+`POST`
+
+**Endpoint*
+
+`/auth/register`
+
 **Authentication*
 
 None.
 
 **Request Body*
 
-None.
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "Password123!"
+}
 
 ### Success Response
 
