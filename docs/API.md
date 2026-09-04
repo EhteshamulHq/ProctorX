@@ -8,7 +8,8 @@ Base path:
 
 ## Status
 
-API contract will be finalized during backend implementation.
+The endpoints below are currently implemented. The remaining planned domains
+will be documented as they are added to the backend.
 
 ## Planned Domains
 
@@ -40,6 +41,24 @@ Development:
 
 `/health`
 
+**Authentication*
+
+None.
+
+**Response*
+
+```json
+{
+  "success": true,
+  "data": {
+    "service": "ProctorX API",
+    "status": "healthy",
+    "environment": "development",
+    "timestamp": "2026-09-04T12:00:00.000Z"
+  }
+}
+```
+
 ## Authentication
 
 ### Register Candidate
@@ -64,6 +83,11 @@ None.
   "email": "john@example.com",
   "password": "Password123!"
 }
+```
+
+**Response*
+
+Returns `201 Created` with the new user in the `data.user` property.
 
 ## Login
 
@@ -81,10 +105,15 @@ None.
 
 None.
 
-**Request Body**
+**Request Body*
 
 ```json
 {
   "email": "candidate@example.com",
   "password": "Password123!"
 }
+```
+
+**Response*
+
+Returns `200 OK` with the authenticated user and token in the `data` property.
