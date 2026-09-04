@@ -10,7 +10,15 @@ Database schema is not finalized.
 
 ## Planned Entities
 
-- User
+User
+├── name
+├── email
+├── passwordHash
+├── role
+├── isActive
+├── createdAt
+└── updatedAt
+
 - Organization
 - Question
 - QuestionCategory
